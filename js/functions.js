@@ -28,7 +28,7 @@ const newGame = () => {
 }
 
 const win = () => {
-    alert(' You have guessed right, the word is ${randomizedWord}. ')
+    alert(`You have guessed right, the word is ${randomizedWord}.`)
     newGame()
 }
 
@@ -56,7 +56,7 @@ input.addEventListener('keypress',(e) => {
         e.preventDefault()
         guesses = guesses + 1
         document.querySelector('span').innerHTML = guesses
-        
+
         const guess = input.value
         if (guess.toLowerCase() === randomizedWord.toLowerCase()) {
             win()
